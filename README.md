@@ -1,6 +1,8 @@
 # STARmusic ![Badge](https://img.shields.io/static/v1?label=cpp&message=Linguagem&color=blue&style=for-the-badge&logo=cpp)
 > Bibliotecas Usadas: [FFmpeg](https://github.com/FFmpeg/FFmpeg) [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
+#### Video de [demonstração](https://youtu.be/OnR5WoHx7vk)
+
 # USO
 ```bash
 Uso: starmusic.exe [opcoes]
