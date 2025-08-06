@@ -49,10 +49,10 @@ int searchAndDownloadVideo(std::string& text)
     std::cout << "[ >> ]: Procurando video...." << "\n";
     std::this_thread::sleep_for(std::chrono::seconds((1 / 10)));
     std::string cmd = ytdlp + " \"ytsearch1:" + text + "\" --extract-audio " + (std::string)"--ffmpeg-location " + getFfmpeg() + " --audio-format mp3 -o \"musicas/%(title)s.%(ext)s\" >nul 2>&1";
-    std::cout << "[ >> ]: Abaixando...." << "\n";
+    std::cout << "[ >> ]: baixando...." << "\n";
     if (!checkDownload(cmd.c_str())) {
         system("cls");
-        std::cout << ">> Música baixada com sucesso!" << "\n";
+        std::cout << ">> MÃºsica baixada com sucesso!" << "\n";
     }
     else std::cout << "[ ! ]: Aconteceu algum erro, Tente novamente." << "\n";
     convertAll();
@@ -65,14 +65,14 @@ void downloadMusicUrl(const char* videoUrl)
 {
     std::cout << "[ >> ]: Procurando video...." << "\n";
     std::this_thread::sleep_for(std::chrono::seconds((1 / 10)));
-    std::cout << "[ >> ]: Abaixando...." << "\n";
+    std::cout << "[ >> ]: baixando...." << "\n";
     std::string cmd = ytdlp + " --extract-audio " + (std::string)"--ffmpeg-location " + getFfmpeg() + " --audio-format mp3 -o \"musicas/%(title)s.%(ext)s\" \"" + (std::string)videoUrl + "\" >nul 2>&1";
 
     system(cmd.c_str());
     if (!checkDownload(cmd.c_str()))
     {
         system("cls");
-        std::cout << ">> Música baixada com sucesso!" << "\n";
+        std::cout << ">> MÃºsica baixada com sucesso!" << "\n";
     }
     else
         std::cout << "[ ! ]: Aconteceu algum erro, Tente novamente." << "\n";
